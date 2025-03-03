@@ -1,4 +1,4 @@
 package com.app.jakartacourse.scholarly.hibernate;
 
-public class HibernateUtil g{
+public class HibernateUtil {
 }
