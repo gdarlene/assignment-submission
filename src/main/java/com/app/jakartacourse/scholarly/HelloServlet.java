@@ -1,4 +1,4 @@
-package com.app.jakartacourse.jsa;
+package com.app.jakartacourse.scholarly;
 
 import java.io.*;
 
