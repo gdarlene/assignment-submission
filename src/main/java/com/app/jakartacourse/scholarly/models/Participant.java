@@ -3,7 +3,7 @@ package com.app.jakartacourse.scholarly.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "Participant")
 public class Participant {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
