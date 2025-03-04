@@ -1,17 +1,28 @@
 package com.app.jakartacourse.scholarly.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Users")
 public class Participant {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String userName;
     private String lastName;
     private String firstName;
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
     private String email;
     private String password;
     private String Gender;
     private String course;
     private String phoneNumber;
     private String classRoom;
-    Participant(){}
+
+    public Participant() {
+
+    }
 
     public int getId() {
         return id;
@@ -92,4 +103,13 @@ public class Participant {
     public void setClassRoom(String classRoom) {
         this.classRoom = classRoom;
     }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
+
 }
