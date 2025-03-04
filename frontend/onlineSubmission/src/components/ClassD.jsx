@@ -1,7 +1,9 @@
 import DSA from "../../public/download 1.png"
+import Math from "../../public/images 1.png"
 import {FaChevronRight} from 'react-icons/fa'
+import DB from "../../public/download 5.png"
 
-export default function  givenAssignment(){
+export default function  ClassD(){
  
     const data=[
         {
@@ -11,23 +13,23 @@ export default function  givenAssignment(){
             Deadline:"23 March 2025"
         },
         {
-            image:DSA,
-            Title:"DSA Assigment on queues", 
-            Description:"Implement a Priority Queue using a linked list or heap to handle the following operations efficiently: 1.enqueue(name, type) - Add a customer to the queue.... ", 
+            image:Math,
+            Title:"Math Assigment on Trigonometry ", 
+            Description:"A scientist is studying the growth rate of a bacteria colony over time. The number of bacteria at time t (in hours) is given by the function... a Priority Queue using a linked list or heap to handle the following operations efficiently: 1.enqueue(name, type) - Add a customer to the queue.... ", 
             Deadline:"29 March 2025"
 
         }, 
         {
-            image:DSA,
-            Title:"DSA Assigment on Linked list", 
-            Description:"You are developing a student record management system that stores student names and their IDs using a singly linked list. The system should....... ", 
+            image:DB,
+            Title:"Advanced DB assignment on functions", 
+            Description:"You are designing a student grading system using PostgreSQL/MySQL. Each student has multiple assignments.......", 
             Deadline:"30 March 2025"
 
         },
         {
-            image:DSA,
-            Title:"DSA Assigment on pointers", 
-            Description:"You are given an array of integers, and your task is to implement a function using pointers to reverse the array in-place without using extra memory......... ", 
+            image:Math,
+            Title:"Math assignment on limits", 
+            Description:"A scientist is studying the growth rate of a bacteria colony over time. The number of bacteria at time ttt (in hours) is given by the function...", 
             Deadline:"1 April 2025"
         }
 
@@ -44,11 +46,11 @@ export default function  givenAssignment(){
                 <img src={item.image}  className="w-[90] h-[115px]"/>
                 <div className="flex  flex-col gap-[1rem] ">
                     <h1 className="font-semibold text-[#2C7BE5]">{item.Title}</h1>
-                    <p className="">{item.Description}</p>
+                    <p className="w-[673px] overflow-hidden text-ellipses line-clamp-2 ">{item.Description}</p>
                     <p className="text-[#2C7BE5]">Deadline: {item.Deadline}</p>
                 </div>
             </div>
-            
+        
             <div className=" px-6 py-3  bg-[#2C7BE5] text-white flex min-w-[140px] w-auto  gap-[5px] shadow-md  items-center   text-[13px]  justify-center rounded-full  self-end hover:bg-[#2365d2]">  
                 View more 
                  <FaChevronRight/>

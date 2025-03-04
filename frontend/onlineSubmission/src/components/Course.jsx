@@ -48,8 +48,8 @@ export default function  givenAssignment(){
                     <p className="text-[#2C7BE5]">Deadline: {item.Deadline}</p>
                 </div>
             </div>
-            
-            <div className=" px-6 py-3  bg-[#2C7BE5] text-white flex min-w-[140px] w-auto  gap-[5px] shadow-md  items-center   text-[13px]  justify-center rounded-full  self-end hover:bg-[#2365d2]">  
+        
+            <div className=" bg-[#2C7BE5] text-white flex w-[176px] h-[56px]  items-center gap-[1rem]  text-[13px]  justify-center rounded-full  self-end">  
                 View more 
                  <FaChevronRight/>
                 </div>
