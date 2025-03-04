@@ -5,8 +5,8 @@ import java.io.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "signUpServletServlet", value = "/signUpServlet-servlet")
-public class signUpServlet extends HttpServlet {
+@WebServlet(name = "StudentSignInServletServlet", value = "/StudentSignInServlet-servlet")
+public class StudentSignInServlet extends HttpServlet {
     private String message;
 
     public void init() {
