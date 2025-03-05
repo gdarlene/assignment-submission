@@ -2,27 +2,24 @@ package com.app.jakartacourse.scholarly.controllers;
 
 import java.io.*;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "StudentSignOutServletServlet", value = "/StudentSignOutServlet-servlet")
+@WebServlet("/signout")
 public class StudentSignOutServlet extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Hello World!";
+    private static final long serialVersionUID = 1L;
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+        logout(req,res);
     }
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        logout(req,res);
     }
-
-    public void destroy() {
+    private void logout(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+        HttpSession session = req.getSession(false);
+        if(session != null){
+            session.invalidate();
+        }
+        res.sendRedirect("signin.jsp?message=LoggedOutSuccessfully");
     }
 }
