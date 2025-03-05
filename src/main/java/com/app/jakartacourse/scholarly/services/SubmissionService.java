@@ -43,7 +43,7 @@ public class SubmissionService {
             return session.get(Submissions.class, submissionId);
         }
     }
-    public Submissions getSubmissionById(Long submissionId) {
+    public Submissions getAssignmentById(int submissionId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Submissions.class, submissionId);
         }

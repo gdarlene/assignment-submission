@@ -17,6 +17,8 @@ public class Assignment {
     @JoinColumn(name = "instructor_id")
     private Participant instructor;
 
+    @OneToMany(mappedBy = "assignment" , cascade = CascadeType.ALL)
+    private List<Submissions> submissions;
     @ManyToOne
     @JoinColumn(name = "author")
     private Participant author;
