@@ -21,7 +21,7 @@ public class SubmissionService {
         }
     }
 
-    public List<Submissions> getSubmissionsByAssignment(Long assignmentId) {
+    public List<Submissions> getSubmissionsByAssignment(int assignmentId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("FROM Submissions WHERE assignment.id = :assignmentId", Submissions.class)
                     .setParameter("assignmentId", assignmentId)
@@ -29,7 +29,7 @@ public class SubmissionService {
         }
     }
 
-    public Submissions getSubmissionByStudentAndAssignmentById(Long studentId, Long assignmentId) {
+    public Submissions getSubmissionByStudentAndAssignmentById(int studentId, int assignmentId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("FROM Submissions WHERE student.id = :studentId AND assignment.id = :assignmentId", Submissions.class)
                     .setParameter("studentId", studentId)
@@ -38,13 +38,13 @@ public class SubmissionService {
         }
     }
 
-    public Submissions getSubmissionById(Long submissionId) {
+    public Submissions getSubmissionById(int submissionId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Submissions.class, submissionId);
         }
     }
 
-    public void deleteSubmission(Long submissionId) {
+    public void deleteSubmission(int submissionId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
