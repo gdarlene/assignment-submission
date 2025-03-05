@@ -1,13 +1,23 @@
 package com.app.jakartacourse.scholarly.models;
 
-import java.time.LocalDateTime;
+import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+@Entity
+@Table(name = "Submisisons")
 public class Submissions {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String submissionsPath;
     private LocalDateTime submissionDate;
+    @ManyToOne
+    @JoinColumn(name = "assignment_id")
     private Assignment assignment;
-    private UserRole student;
+
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Participant student;
 
     public int getId() {
         return id;
@@ -41,11 +51,11 @@ public class Submissions {
         this.assignment = assignment;
     }
 
-    public UserRole getStudent() {
+    public Participant getStudent() {
         return student;
     }
 
-    public void setStudent(UserRole student) {
+    public void setStudent(Participant student) {
         this.student = student;
     }
 }
