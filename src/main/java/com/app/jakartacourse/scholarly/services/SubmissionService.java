@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SubmissionService {
 
-    public void saveSubmission(Submissions submissions) {
+    public void saveAssignSubmission(Submissions submissions) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
