@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Submissions {
     private int id;
-    private String filePath;
+    private String submissionsPath;
     private LocalDateTime submissionDate;
     private Assignment assignment;
     private UserRole student;
@@ -17,12 +17,12 @@ public class Submissions {
         this.id = id;
     }
 
-    public String getFilePath() {
-        return filePath;
+    public String getSubmissionsPath() {
+        return submissionsPath;
     }
 
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
+    public void setSubmissionsPath(String submissionsPath) {
+        this.submissionsPath = submissionsPath;
     }
 
     public LocalDateTime getSubmissionDate() {
