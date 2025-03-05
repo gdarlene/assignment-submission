@@ -49,7 +49,7 @@ public class AssignmentSubmissionServlet extends HttpServlet {
         SubmissionService submissionService = new SubmissionService();
         Assignment assignment = submissionService.getAssignmentById(assignmentId).getAssignment();
         Submissions submissions = new Submissions();
-        submissions.setAssignment = (assignment);
+        submissions.setAssignment(assignment);
         submissions.setStudent(participant);
         submissions.setSubmissionsPath(submissionPath);
         submissions.setSubmissionDate(LocalDateTime.now());
