@@ -29,7 +29,7 @@ public class SubmissionService {
         }
     }
 
-    public Submissions getSubmissionByStudentAndAssignment(Long studentId, Long assignmentId) {
+    public Submissions getSubmissionByStudentAndAssignmentById(Long studentId, Long assignmentId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("FROM Submissions WHERE student.id = :studentId AND assignment.id = :assignmentId", Submissions.class)
                     .setParameter("studentId", studentId)
