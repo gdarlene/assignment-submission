@@ -25,11 +25,7 @@ const data= [
     icon:"ManagementIcon",
     label:"Class Management"
     },
-    {
-        path:"/settings",
-        icon:"SettingsIcon",
-        label:"Settings"
-    }
+  
 
 ]
 
@@ -42,14 +38,14 @@ const icons=  {
 
  export default function Sidenav(){
    const location =  useLocation();// get current location from router  
-   const{activeLink , setActiveLink} = useState(location.pathname); // set initial current link based on path 
+   const[activeLink , setActiveLink] = useState(location.pathname); // set initial current link based on path 
 
    const handleLinkClick = (path) =>{
       setActiveLink(path);
    }
 
    return (
-    <div className="bg-[#fff] w-[304px] h-screen pl-[30px] pt-[15px]">
+    <div className=" bg-[#fff] w-[304px] h-screen pl-[30px] pt-[15px]">
       <img src={Logo}  />
       
       <div className='bg-[#d9d9d93b] flex gap-[1rem] items-center justify-center mt-[49px] p-[10px] rounded-xl w-[195px] h-[83px]'>
@@ -69,7 +65,7 @@ const icons=  {
       className={` h-[2.65rem] flex  items-center gap-[16px]  text-[13px] text-[#636363] font-bold
             ${
               activeLink===item.path
-              ?'bg-[#2C7BE5] text-white '
+              ?'bg-[#2C7BE54b]  w-[200px]  rounded-xl py-2 px-4 '
               :'text-[#636363]'
             }
         `}
