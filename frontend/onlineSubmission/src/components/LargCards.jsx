@@ -1,4 +1,4 @@
-import DSA from "../../public/download 1(1).png"
+import DSA from "../../public/download 1.png"
 import Math from "../../public/images 1.png"
 import {FaChevronRight } from "react-icons/fa"
 
