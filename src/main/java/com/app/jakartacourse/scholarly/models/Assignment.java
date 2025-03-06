@@ -1,10 +1,27 @@
 package com.app.jakartacourse.scholarly.models;
 
-import java.time.LocalDate;
+import jakarta.persistence.*;
+import jakarta.servlet.http.Part;
 
+import java.time.LocalDate;
+import java.util.List;
+
+@Entity
+@Table (name = "assignments")
 public class Assignment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Participant instructor;
+
+    @OneToMany(mappedBy = "assignment" , cascade = CascadeType.ALL)
+    private List<Submissions> submissions;
+    @ManyToOne
+    @JoinColumn(name = "author")
+    private Participant author;
     private String description;
     private LocalDate deadLine;
 
