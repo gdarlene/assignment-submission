@@ -7,6 +7,8 @@ import Management from "./pages/class Management";
 import Test from "./pages/Test";
 import Profile from "./pages/Profile";
 import Logout from './pages/Logout';
+import Registration from './pages/Registration';
+import Login from './pages/Login';
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
       <Route path="/test" element={<Test/>} />
       <Route path="/profile" element={<Profile/>} />
       <Route path='/logout' element={<Logout/>}/>
+      <Route path='/registration' element={<Registration/>}/>
+      <Route path='/login' element={<Login/>}/>
 
 
      </Routes>

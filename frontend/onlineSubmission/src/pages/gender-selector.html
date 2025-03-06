@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Selector</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-sm">
+        <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">Gender</label>
+            <div class="flex space-x-6">
+                <!-- Male Option -->
+                <label class="flex items-center group cursor-pointer">
+                    <div class="relative">
+                        <input type="radio" name="gender" value="male" class="sr-only peer">
+                        <div class="w-5 h-5 rounded-full border-2 border-gray-300 bg-white 
+                                  peer-checked:border-yellow-400 peer-checked:bg-white
+                                  group-hover:border-gray-400 transition-colors duration-200">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                      w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-0 
+                                      peer-checked:opacity-100 transition-opacity duration-200">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-700">Male</span>
+                </label>
+
+                <!-- Female Option -->
+                <label class="flex items-center group cursor-pointer">
+                    <div class="relative">
+                        <input type="radio" name="gender" value="female" class="sr-only peer" checked>
+                        <div class="w-5 h-5 rounded-full border-2 border-gray-300 bg-white 
+                                  peer-checked:border-yellow-400 peer-checked:bg-white
+                                  group-hover:border-gray-400 transition-colors duration-200">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                      w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-0 
+                                      peer-checked:opacity-100 transition-opacity duration-200">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-700">Female</span>
+                </label>
+
+                <!-- Rather not say Option -->
+                <label class="flex items-center group cursor-pointer">
+                    <div class="relative">
+                        <input type="radio" name="gender" value="prefer_not_say" class="sr-only peer">
+                        <div class="w-5 h-5 rounded-full border-2 border-gray-300 bg-white 
+                                  peer-checked:border-yellow-400 peer-checked:bg-white
+                                  group-hover:border-gray-400 transition-colors duration-200">
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                      w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-0 
+                                      peer-checked:opacity-100 transition-opacity duration-200">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-700">Rather not say</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add JavaScript for additional functionality
+        document.querySelectorAll('input[name="gender"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                console.log('Selected gender:', e.target.value);
+            });
+        });
+    </script>
+</body>
+</html> 
