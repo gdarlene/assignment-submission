@@ -2,6 +2,32 @@ package com.app.jakartacourse.scholarly.controllers;
 
 import java.io.*;
 
+<<<<<<< HEAD
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+
+@WebServlet(name = "StudentSignInServletServlet", value = "/StudentSignInServlet-servlet")
+public class StudentSignInServlet extends HttpServlet {
+    private String message;
+
+    public void init() {
+        message = "Hello World!";
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html");
+
+        // Hello
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>" + message + "</h1>");
+        out.println("</body></html>");
+    }
+
+    public void destroy() {
+    }
+}
+=======
 import com.app.jakartacourse.scholarly.models.Participant;
 import com.app.jakartacourse.scholarly.services.StudentService;
 import jakarta.servlet.http.*;
@@ -47,3 +73,4 @@ public class StudentSignInServlet extends HttpServlet {
         return false;
     }
 }
+>>>>>>> 37c9f61a6261686ecd241e47505ed1afc702ee4b

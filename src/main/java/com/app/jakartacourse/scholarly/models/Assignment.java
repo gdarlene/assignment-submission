@@ -1,5 +1,12 @@
 package com.app.jakartacourse.scholarly.models;
 
+<<<<<<< HEAD
+import java.time.LocalDate;
+
+public class Assignment {
+    private int id;
+    private String title;
+=======
 import jakarta.persistence.*;
 import jakarta.servlet.http.Part;
 
@@ -22,6 +29,7 @@ public class Assignment {
     @ManyToOne
     @JoinColumn(name = "author")
     private Participant author;
+>>>>>>> 37c9f61a6261686ecd241e47505ed1afc702ee4b
     private String description;
     private LocalDate deadLine;
 

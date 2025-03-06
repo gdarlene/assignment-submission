@@ -1,6 +1,31 @@
 package com.app.jakartacourse.scholarly.controllers;
 
 import java.io.*;
+<<<<<<< HEAD
+
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+
+@WebServlet(name = "AssignmentSubmissionServletServlet", value = "/AssignmentSubmissionServlet-servlet")
+public class AssignmentSubmissionServlet extends HttpServlet {
+    private String message;
+
+    public void init() {
+        message = "Hello World!";
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html");
+
+        // Hello
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>" + message + "</h1>");
+        out.println("</body></html>");
+    }
+
+    public void destroy() {
+=======
 import java.time.LocalDateTime;
 
 import com.app.jakartacourse.scholarly.models.Assignment;
@@ -58,5 +83,6 @@ public class AssignmentSubmissionServlet extends HttpServlet {
     }
     private String ensureFileSecurity(String fileName) {
         return fileName.replaceAll("[^a-zA-Z0-9.-]", "_");
+>>>>>>> 37c9f61a6261686ecd241e47505ed1afc702ee4b
     }
 }
