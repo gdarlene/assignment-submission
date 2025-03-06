@@ -1,5 +1,8 @@
 package com.app.jakartacourse.scholarly.services;
 
+<<<<<<< HEAD
+public class SubmissionService {
+=======
 import com.app.jakartacourse.scholarly.hibernate.HibernateUtil;
 import com.app.jakartacourse.scholarly.models.Submissions;
 import org.hibernate.Session;
@@ -63,4 +66,5 @@ public class SubmissionService {
         }
     }
 
+>>>>>>> 37c9f61a6261686ecd241e47505ed1afc702ee4b
 }

@@ -1,5 +1,14 @@
 package com.app.jakartacourse.scholarly.models;
 
+<<<<<<< HEAD
+import java.time.LocalDateTime;
+
+public class Submissions {
+    private int id;
+    private String filePath;
+    private LocalDateTime submissionDate;
+
+=======
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -58,4 +67,5 @@ public class Submissions {
     public void setStudent(Participant student) {
         this.student = student;
     }
+>>>>>>> 37c9f61a6261686ecd241e47505ed1afc702ee4b
 }
