@@ -2,10 +2,12 @@ import { FaGlobe } from "react-icons/fa"
 import Background from "../../public/MacBook Pro 16_ - 19.png"
 import Penguin from "../../public/penguin 1.png"
 import Dropdown from "../components/dropdown"
+import { Link } from "react-router-dom"
 
 
 
 export default function Logout(){
+  
 
     return (
      <div className=" flex flex-col  gap-[50px] py-[30px] px-[20px]" style={{backgroundImage:`url(${Background})`}}>
@@ -30,9 +32,9 @@ export default function Logout(){
         <p className="font-light">Log in again to access Scholarly’s features and functionialities.</p>
        </div>
 
-         <button className=" px-20 py-3  bg-[#2C7BE5] text-white flex min-w-[140px] w-auto  gap-[5px] shadow-md  items-center font-bold    text-[20px]  justify-center rounded-full   hover:bg-[#2365d2]">  
+         <Link to={"/login"} className=" px-20 py-3  bg-[#2C7BE5] text-white flex min-w-[140px] w-auto  gap-[5px] shadow-md  items-center font-bold    text-[20px]  justify-center rounded-full   hover:bg-[#2365d2]">  
                        Log in 
-                       </button>
+                       </Link>
                
       </div>
 
